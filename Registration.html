@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Registration</title>
+<link rel="shortcut icon" href="images/favicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://bootstraptaste.com" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+
+
+<!-- Theme skin -->
+<link href="skins/default.css" rel="stylesheet" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+	<header  >
+        <div class="navbar navbar-default navbar-static-top" style="border-bottom:thin solid #D5D5D5">
+            <div class="container">        
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="index.html"><img id="logo" src="images/logo2.png"/></a>
+               
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav">
+                    <br/>
+                    	<li class="pull-right">
+                         <form class="form">
+	                        <span class="form-horizontal text-info" id="message">
+                        	 </span>
+                            <input class=" form-control-static form-horizontal" type="text" placeholder="Username" id="name" />
+                            <input class=" form-control-static form-horizontal " type="password" placeholder="Password" id="passwd"/>
+                            <a href="#" class="btn btn-blue" onClick="login()"> Login</a>
+                        </form>
+
+                       </li>
+                    </ul>
+                    <ul class="nav navbar-nav ">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Activities <b class=" icon-angle-down"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="workshops.html">Workshops</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+							</ul>
+                        </li>
+                        <li><a href="aayaam.html">AAYAAM</a></li>
+                        <li><a href="posts.html">Posts</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+
+   	<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="breadcrumb">
+					<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">Registration</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+	<div class="container" style="background-image:url(images/tulips.JPG); background-size:cover">
+    	<div class="row">
+ 			<div class="col-lg-7 text-center">	
+            	<div class="text-info box-gray col-lg-6 margintop30">
+                	NOTE:Please Provide Valid Credentials otherwise Your SRC Id would Not Be Generated
+                </div>					
+            </div>	
+	 		<div class="box-gray col-lg-5" style="opacity:.8">
+    			<h1 class="text-center "> Registration</h1>
+               
+				<form id="contactform"  method="POST" class="validateform" name="send-contact">
+						<div id="message2" >
+							 Fill the form below
+						</div>	
+                    		<label >*Name </label>
+							<input type="text" class="form-control"  id="name2" placeholder="Enter name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" /> 
+							<div class="validation alert-warning">
+							</div>
+                            <label  >*Email </label>
+							<input type="text" class="form-control" id="email" placeholder="* Enter your email address" data-rule="email" data-msg="Please enter a valid email" />
+							<div class="validation alert-warning">
+							</div>
+							<label >*Contact No. </label>
+                            <input type="text" class="form-control" id="contact" placeholder="Contact Without country code" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+							<div class="validation alert-warning">
+                           </div>
+							
+							<label >*Branch. </label>
+       
+							<select id="branch" class="form-control">
+                            	<option value="CS" >Computer Science </option>
+                                <option value="IT" >Information Technology </option>
+                                <option value="EC" >Electronics And Telecommunication </option>     
+                                <option value="EI" >Electronics And Instrumentation </option>     
+                                <option value="EE" >Electrical Engineering </option>     
+                                <option value="MECH" >Mechanical Engineering</option>     
+                                <option value="IP" >Industrial Production</option>     
+                                <option value="CE" >Civil Engineering</option>     
+                                <option value="OTH" >Other </option>     
+        	                   </select>
+                            
+                            <div class="validation alert-warning">
+							</div>
+                          	<label>*College. </label>
+                            <input type="text" class="form-control" id="college" placeholder="Please give full name " data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+							<div class="validation alert-warning">
+							</div>
+                            <label>skills, Achievements (if any) </label>
+				<div class="col-lg-12 margintop10 field">
+							<textarea rows="12" id="Description" class="input-block-level" placeholder="* Your message here..." data-rule="required" data-msg="Please write something"></textarea>
+				</div>
+							<div class="validation">
+							</div>							<p>
+								<button class="btn btn-theme margintop10 pull-left" type="button" onClick="uploadFile()">Submit</button>
+								<span class="pull-right margintop20">* Please fill all required form field, thanks!</span>
+							</p>
+						</div>
+				</form>
+			</div>
+        </div>
+	</div>
+	</section>
+	<footer>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
+<script src="js/ui_js/registration.js"></script>
+</body>
+</html>

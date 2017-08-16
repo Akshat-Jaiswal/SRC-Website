@@ -1,0 +1,25 @@
+ 
+//-----------import the addtional.sql file in src database-------
+
+//---- place the below files in php folder----//
+.htaccess replace old one with this new one
+ChakravyuhRegistration.php
+SarthiRegistration.php
+TechArohanRegistration.php
+
+//-------------Note----------------
+Validations are to be performed on client Side These Scripts assume the input to be correct to it and does not check for calid emails,contact  etc
+
+//--------------Parameters Need To Be Passed To Each Script------
+Required Parameters:
+	teamName,name1,email1,contact1,address1 and college1
+Optional Parameters
+	name2,email2,contact2,address2 and college2
+	name3,email3,contact3,address3 and college3
+//-----------NOTE------------------
+	only 2 optional parameter lists can be provided for Saarthi and Chakravyuh
+	however 4 optional parameter lists can be passed for techarohan in format like name4 ... name5...
+//----------Response Of Each Script-----------------
+Each Script Return a json object of format
+ { "code":[integer], "data":[description]}
+only "code":6 corressponds to successful Registration other Codes are for errors along with their Description in data entry of response
